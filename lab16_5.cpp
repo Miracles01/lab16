@@ -17,5 +17,19 @@ int main(){
 	
 	return 0;
 }
+void shuffle(int *l,int *o,int *v,int *e){
+	int x[]={*l,*o,*v,*e};
 
-//Write definition of shuffle() using pointer here 
+	for(int i = 0; i<4 ; i++){
+		int y = rand()%4 , z= rand()%4;
+
+		swap(x[y],x[z]);
+
+	} 
+
+	*l = x[0];
+	*o = x[1];
+	*v = x[2];
+	*e = x[3];
+}
+
